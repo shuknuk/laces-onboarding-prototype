@@ -1,8 +1,8 @@
-import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
+import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
 });
 
@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${plusJakartaSans.variable} h-full antialiased dark`}
+      className={`${playfairDisplay.variable} ${plusJakartaSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#050508] text-[#f3f4f6] font-jakarta">
+      <body className="min-h-full flex flex-col bg-[#f9f6f3] text-[#2e2e2e] font-jakarta">
         {children}
       </body>
     </html>

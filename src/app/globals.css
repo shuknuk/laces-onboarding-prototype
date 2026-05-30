@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05050b;
+  --foreground: #f3f4f6;
+  --brand: #e21d48; /* Premium Rose/Pink */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-display: var(--font-outfit), system-ui, sans-serif;
+  
+  /* Custom vibrant colors */
+  --color-brand: var(--brand);
+  --color-f1: #e10600; /* F1 Red */
+  --color-nba: #1d428a; /* NBA Blue */
+  --color-nba-gold: #c9082a; /* NBA Red */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Glassmorphism utility classes */
+.glass {
+  background: rgba(13, 13, 23, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-hover:hover {
+  background: rgba(20, 20, 35, 0.8);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(226, 29, 72, 0.15);
+}
+
+/* Custom glow effect */
+.glow-rose {
+  box-shadow: 0 0 50px -10px rgba(226, 29, 72, 0.3);
+}
+
+.glow-f1 {
+  box-shadow: 0 0 50px -10px rgba(225, 6, 0, 0.35);
+}
+
+.glow-nba {
+  box-shadow: 0 0 50px -10px rgba(29, 66, 138, 0.35);
+}
+
+/* Smooth custom transitions */
+.transition-all-custom {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
